@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace BlackJack_1
 
@@ -27,6 +27,7 @@ namespace BlackJack_1
                     int Spelare2 = slump.Next(1, 11);
                     int Dator = slump.Next(1, 11);
                     int Dator2 = slump.Next(1, 11);
+                    
 
                     Console.WriteLine("Nu kommer två kort att dras");
                     Console.WriteLine("Din poäng:" + (Spelare + Spelare2));
@@ -37,10 +38,16 @@ namespace BlackJack_1
                     switch (val2[0])
                     {
                         case 'j':
-                            spelareSum += slump.Next(1, 11);
-                            datorsum += slump.Next(1, 11);
+                            spelareSum += Spelare + Spelare2;
+                            datorsum += Dator + Dator2;
 
-                            Console.WriteLine({spe})
+                            int nyPoäng = slump.Next(1, 11);
+                            spelareSum += nyPoäng;
+                            datorsum += nyPoäng;
+                            Console.WriteLine($"Ditt kortdrag är värt: {nyPoäng}");
+                            Console.WriteLine($"Din nya poäng är: {spelareSum}");
+                            Console.WriteLine($"Ditt kortdrag är värt: {nyPoäng}");
+                            Console.WriteLine($"Din nya poäng är: {datorsum}");
                             break;
 
                         case 'n':
@@ -48,7 +55,7 @@ namespace BlackJack_1
                             break;
                     }
 
-                    break;
+                         break;
                     
                    
                 case 2:
